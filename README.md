@@ -11,6 +11,7 @@ Clone the code:
 	
 Compile:
 --------
+(*~~linux~~*)  	
 	1. cd zephyr
 	2. source zephyr-env.sh
 	3. cd ..
