@@ -14,26 +14,6 @@
 #include <bluetooth/gatt.h>
 #include <misc/byteorder.h>
 
-/* reboot status */
-struct device *flash_dev;
-static uint32_t boot_count;
-
-#define FLASH_BOOT_OFFSET 0x3fc00 //0x3f800
-#define FLASH_PAGE_SIZE   1024
-#define FLASH_COMPANY_ID  0xFF0F
-
-
-/* BLE reporting */
-#define DEVICE_NAME "iot_repeater"
-#define DEVICE_NAME_LEN (sizeof(DEVICE_NAME) - 1)
-
-#define BT_LE_ADV_LOWPOWER BT_LE_ADV_PARAM(BT_LE_ADV_OPT_CONNECTABLE, 0x640, 0x640)
-#define BT_LE_ADV_CONN2 BT_LE_ADV_PARAM(BT_LE_ADV_OPT_CONNECTABLE, \
-				       BT_GAP_ADV_FAST_INT_MIN_2, \
-				       BT_GAP_ADV_FAST_INT_MAX_2)
-				       
-#define htons(x) sys_cpu_to_be16(x)
-#define htonl(x) sys_cpu_to_be32(x)
 
 #define BLE_MAX_ADV_SIZE 31
 
